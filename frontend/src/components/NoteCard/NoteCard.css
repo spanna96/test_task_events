@@ -1,0 +1,82 @@
+.NoteCard {
+  width: 100%;
+  border-bottom: 1px solid #e4e4e5;
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 15% auto;
+  grid-column-gap: 20px;
+}
+
+.NoteCard-type {
+  padding: 2px 5px;
+  border: 2px solid #00000024;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: fit-content;
+}
+
+.NoteCard-resource {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: auto 20% 20%;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+.NoteCard-resource:last-child {
+  margin-bottom: 0;
+}
+
+.NoteCard-resource:not(:first-child) .NoteCard-date {
+  color: #8080806e;
+}
+
+.NoteCard-detail {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.NoteCard-date-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .NoteCard {
+    display: block;
+  }
+
+  .NoteCard-type-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .NoteCard-type {
+    margin-bottom: 10px;
+  }
+
+  .NoteCard-resource {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: auto 20%;
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
+
+  .NoteCard-date {
+    display: none;
+  }
+
+  .NoteCard-code {
+    text-align: right;
+    color: #66666696;
+  }
+
+  .NoteCard-date-mobile {
+    display: block;
+  }
+}

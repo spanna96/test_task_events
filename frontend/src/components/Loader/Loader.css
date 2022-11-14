@@ -1,0 +1,41 @@
+.Loader {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 20px;
+  opacity: 0;
+  transition: opacity 0.7s ease 2s;
+}
+
+.Loader.visible {
+  opacity: 1;
+  transition: opacity 01s ease 0s;
+
+}
+
+.Loader > div {
+  width: 16px;
+  height: 16px;
+  margin: 3px 6px;
+  border-radius: 50%;
+  background-color: #a3a1a1;
+  opacity: 1;
+  animation: loader 0.6s infinite alternate;
+}
+
+@keyframes loader {
+  to {
+    opacity: 0.1;
+    transform: translateY(-16px);
+  }
+}
+
+.Loader > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.Loader > div:nth-child(3) {
+  animation-delay: 0.4s;
+}

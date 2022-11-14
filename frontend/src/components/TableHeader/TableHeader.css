@@ -1,0 +1,19 @@
+.TableHeader {
+  width: 100%;
+  transform: translateY(-1px);
+  border-bottom: 1px solid #e4e4e5;
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 15% auto 17% 17%;
+  grid-column-gap: 20px;
+  color: gray;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .TableHeader {
+    display: none;
+  }
+}
